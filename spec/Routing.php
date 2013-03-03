@@ -10,8 +10,10 @@ class Routing extends ObjectBehavior
 {
 	public function it_should_load_url()
 	{
-		$this::Load('test/test')->shouldReturn(true);
+		$this::Load('test/test/tree/1')->shouldReturn(true);
 		$this::Controller()->shouldReturn('Test');
+		$this::Action()->shouldReturn('Test');
+		$this::Request()->shouldReturn(array('tree' => '1'));
 	}
 
     function it_should_be_initializable()

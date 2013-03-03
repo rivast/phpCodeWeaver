@@ -52,7 +52,6 @@ final class Routing
 		return true;
     }
 
-
     /**
      * Method returns loaded Controller name
      *
@@ -61,5 +60,25 @@ final class Routing
     static public function Controller()
     {
         return self::$sController;
+    }
+
+    /**
+     * Method returns loaded Action name
+     *
+     * @return 	string
+     */
+    static public function Action()
+    {
+        return self::$sAction;
+    }
+
+    /**
+     * Method returns loaded Request Params
+     *
+     * @return 	array
+     */
+    static public function Request()
+    {
+        return self::$aRequest;
     }
 }
