@@ -1,0 +1,6 @@
+default:
+    extensions:
+        Behat\MinkExtension\Extension:
+            base_url: http://10.0.0.10/phpCodeWeaver_project/src/phpCodeWeaver/
+            goutte: ~
+            selenium2: ~

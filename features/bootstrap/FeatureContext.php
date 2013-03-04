@@ -7,6 +7,8 @@ use Behat\Behat\Context\ClosuredContextInterface,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
+use Behat\MinkExtension\Context\MinkContext;
+
 //
 // Require 3rd-party libraries here:
 //
@@ -17,7 +19,7 @@ use Behat\Gherkin\Node\PyStringNode,
 /**
  * Features context.
  */
-class FeatureContext extends BehatContext
+class FeatureContext extends MinkContext
 {
     /**
      * Initializes context.
@@ -41,4 +43,21 @@ class FeatureContext extends BehatContext
 //        doSomethingWith($argument);
 //    }
 //
+
+
+    /**
+     * @Given /^I am a Visitor$/
+     */
+    public function iAmAVisitor()
+    {
+        #-> Do nothing 
+    }
+
+    /**
+     * @Then /^I I should see "([^"]*)"$/
+     */
+    public function iIShouldSee($arg1)
+    {
+        throw new PendingException();
+    }
 }
