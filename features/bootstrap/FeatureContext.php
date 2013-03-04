@@ -52,12 +52,4 @@ class FeatureContext extends MinkContext
     {
         #-> Do nothing 
     }
-
-    /**
-     * @Then /^I I should see "([^"]*)"$/
-     */
-    public function iIShouldSee($arg1)
-    {
-        throw new PendingException();
-    }
 }
