@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>phpCodeWeaver by zachmanpro</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>phpCodeWeaver</h1>
+        <h2>A BDD php framework builder</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/zachmanpro/phpCodeWeaver/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/zachmanpro/phpCodeWeaver/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/zachmanpro/phpCodeWeaver" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>phpCodeWeaver</h1>
+
+<p>The aim of this project is to create a web application that can "scaffold" a BDD ready web-application project.</p>
+
+<p>It's been developed and tested in a LAMP stack environment with Xdebug enabled, so there is no guarantee that in will run on a Windows development environment.</p>
+
+<h1>Current tools needed:</h1>
+
+<h2>Behat with Mink</h2>
+
+<ul>
+<li>Download <a href="https://github.com/Behat/Behat.git">master</a> - staging branch. Latest stable version:</li>
+</ul><div class="highlight"><pre><span class="nv">$&gt;</span> git clone https://github.com/Behat/Behat.git
+<span class="nv">$&gt;</span> git submodule update --init
+</pre></div>
+
+<ul>
+<li>Create a composer.json file in Behat root:</li>
+</ul><div class="highlight"><pre><span class="o">{</span>
+    <span class="s2">"require"</span>: <span class="o">{</span>
+        <span class="s2">"behat/behat"</span>: <span class="s2">"2.4.*@stable"</span>,
+        <span class="s2">"behat/mink"</span>: <span class="s2">"1.4.*@stable"</span>,
+        <span class="s2">"behat/mink-extension"</span>: <span class="s2">"*"</span>,
+        <span class="s2">"behat/mink-goutte-driver"</span>: <span class="s2">"*"</span>,
+        <span class="s2">"behat/mink-selenium2-driver"</span>: <span class="s2">"*"</span>
+    <span class="o">}</span>,
+    <span class="s2">"minimum-stability"</span>: <span class="s2">"dev"</span>,
+    <span class="s2">"config"</span>: <span class="o">{</span>
+        <span class="s2">"bin-dir"</span>: <span class="s2">"bin/"</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+<ul>
+<li>Install:</li>
+</ul><div class="highlight"><pre><span class="nv">$&gt;</span> wget -nc http://getcomposer.org/composer.phar
+<span class="nv">$&gt;</span> php composer.phar install
+</pre></div>
+
+<ul>
+<li>It's useful to create an alias. For example:</li>
+</ul><div class="highlight"><pre><span class="nv">$&gt;</span> <span class="nb">alias </span><span class="nv">behat</span><span class="o">=</span><span class="s1">'/var/www/Behat/bin/behat'</span>
+</pre></div>
+
+<ul>
+<li>Test Behat setup with:</li>
+</ul><div class="highlight"><pre><span class="nv">$&gt;</span> behat run
+</pre></div>
+
+<ul>
+<li>Visit <a href="http://behat.org">http://behat.org</a> for more information and documentation.</li>
+</ul><h2>PhpSpec2</h2>
+
+<ul>
+<li>Download <a href="https://github.com/phpspec/phpspec2">master</a> - staging branch. Latest stable version:</li>
+</ul><div class="highlight"><pre><span class="nv">$&gt;</span> git clone https://github.com/phpspec/phpspec2
+</pre></div>
+
+<ul>
+<li>Install:</li>
+</ul><div class="highlight"><pre><span class="nv">$&gt;</span> wget -nc http://getcomposer.org/composer.phar
+<span class="nv">$&gt;</span> php composer.phar install
+</pre></div>
+
+<ul>
+<li>It's useful to create an alias. For example:</li>
+</ul><div class="highlight"><pre><span class="nv">$&gt;</span> <span class="nb">alias </span><span class="nv">phpspec</span><span class="o">=</span><span class="s1">'/var/www/phpspec2/bin/phpspec'</span>
+</pre></div>
+
+<ul>
+<li>Test Behat setup with:</li>
+</ul><div class="highlight"><pre><span class="nv">$&gt;</span> phpspec
+</pre></div>
+
+<ul>
+<li>Visit <a href="http://phpspec.net">http://phpspec.net</a> for more information and documentation.</li>
+</ul><h2>Next?</h2>
+
+<ul>
+<li>Integrate PhpDocs</li>
+<li>Integrate CodeSniffer </li>
+</ul><h2>Any improvement or comments are welcome.</h2>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
