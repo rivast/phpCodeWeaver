@@ -2,7 +2,8 @@
 
 namespace spec\phpCodeWeaver\Library;
 
-include_once(dirname(__DIR__).'/src/phpCodeWeaver/Library/Routing.php');
+include_once(dirname(__DIR__) . '/../src/phpCodeWeaver/Config/Shared.php');
+include_once(dirname(__DIR__).'/../src/phpCodeWeaver/Library/Routing.php');
 
 use PHPSpec2\ObjectBehavior;
 
