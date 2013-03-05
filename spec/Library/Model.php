@@ -2,8 +2,8 @@
 
 namespace spec\phpCodeWeaver\Library;
 
-include_once(dirname(__DIR__) . '/src/phpCodeWeaver/Config/Shared.php');
-include_once(dirname(__DIR__) . '/src/phpCodeWeaver/Library/Model.php');
+include_once(dirname(__DIR__) . '/../src/phpCodeWeaver/Config/Shared.php');
+include_once(dirname(__DIR__) . '/../src/phpCodeWeaver/Library/Model.php');
 
 use PHPSpec2\ObjectBehavior;
 
