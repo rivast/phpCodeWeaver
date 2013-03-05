@@ -9,7 +9,11 @@ Currently have only been developed on a LAMP configuration, so there is no guara
 
 Current tools needed:
 
-Behat, PhpSpec and Xdebug enabled.
+Behat with Mink, 
+
+PhpSpec2,
+
+Xdebug enabled.
 
 
 Any improvement or comment are welcome.
