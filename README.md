@@ -81,12 +81,17 @@ $> alias phpspec='/var/www/phpspec2/bin/phpspec'
   - Test Behat setup with:
 
 ```bash
-$> behat run
+$> phpspec
 ```
 
   - Visit [http://phpspec.net](http://phpspec.net) for more information and documentation.
 
 
+Next?
+-----
+
+  - Integrate PhpDocs
+  - Integrate CodeSniffer 
 
 Any improvement or comments are welcome.
 ---------------------------------------
