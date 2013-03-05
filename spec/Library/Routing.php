@@ -2,10 +2,10 @@
 
 namespace spec\phpCodeWeaver\Library;
 
+use PHPSpec2\ObjectBehavior;
+
 include_once(dirname(__DIR__) . '/../src/phpCodeWeaver/Config/Shared.php');
 include_once(dirname(__DIR__).'/../src/phpCodeWeaver/Library/Routing.php');
-
-use PHPSpec2\ObjectBehavior;
 
 class Routing extends ObjectBehavior
 {
@@ -17,7 +17,7 @@ class Routing extends ObjectBehavior
 		$this::Request()->shouldReturn(array('tree' => '1'));
 	}
 
-    function it_should_be_initializable()
+    public function it_should_be_initializable()
     {
         $this->shouldHaveType('phpCodeWeaver\Library\Routing');
     }

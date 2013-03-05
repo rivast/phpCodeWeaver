@@ -17,10 +17,10 @@ use phpCodeWeaver\Library\Routing;
 try {
 	require_once('Library' . DS . 'Shared.php');
 
-	if (Routing::Load($sUrlRequested)) {
-		$sController = 'phpCodeWeaver\\Controllers\\' . Routing::Controller();
+	if (Routing::load($sUrlRequested)) {
+		$sController = 'phpCodeWeaver\\Controllers\\' . Routing::controller();
 		$oController = new $sController();
-		$oController->Execute(Routing::Action());
+		$oController->execute(Routing::action());
 	}
 } catch (Exception $oException) {
     // Something went horribly wrong and nothing caught it

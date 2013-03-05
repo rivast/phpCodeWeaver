@@ -9,12 +9,12 @@ use PHPSpec2\ObjectBehavior;
 
 class Controller extends ObjectBehavior
 {
-    function it_should_be_initializable()
+    public function it_should_be_initializable()
     {
         $this->shouldHaveType('phpCodeWeaver\Library\Controller');
     }
 
-    function it_should_execute_controller_action()
+    public function it_should_execute_controller_action()
     {
     	$this->Execute('Test')->shouldReturn(true);
     }
