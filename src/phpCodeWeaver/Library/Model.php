@@ -10,5 +10,8 @@ namespace phpCodeWeaver\Library;
 */
 class Model
 {
-	
+	public function __construct()
+	{
+		# code...
+	}
 }
