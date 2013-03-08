@@ -18,19 +18,16 @@ class Controller
 	 * 
 	 * @return bool
 	 */
-    public function Execute($sAction, array $aRequest = array())
+    public function execute($sAction, array $aRequest = array())
     {
     	$this->sAction = $sAction;
     	$this->aRequest = $aRequest;
 
-    	if (method_exists($this, $this->sAction))
-		{
+    	if (method_exists($this, $this->sAction)) {
 			return $this->{$this->sAction}();
+		} else {
+			throw new Exception("Invalid Action for Controller");
 		}
-		else
-		{
-			throw new ControllerException("Invalid Action for Controller");
-		}	
         return $sAction;
     }
 
@@ -39,16 +36,8 @@ class Controller
      *
      * @return 	bool
      */
-    public function Test()
+    public function test()
     {
     	return true;
     }
-
 }
-
-/**
- * The Base Controller exception classs
- *
- * @category 	Exception
- */
-class ControllerException extends \Exception { }

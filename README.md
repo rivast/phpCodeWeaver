@@ -6,6 +6,9 @@ The aim of this project is to create a web application that can "scaffold" a BDD
 
 It's been developed and tested in a LAMP stack environment with Xdebug enabled, so there is no guarantee that in will run on a Windows development environment.
 
+Initial development will happen on the master branch till the first release is ready.
+
+Coding standard: PSR2 
 
 Current tools needed:
 =====================

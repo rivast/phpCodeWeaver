@@ -17,7 +17,7 @@ class Index extends Controller
 	 * 
 	 * @return 	void
 	 */
-	public function Home()
+	public function home()
 	{
 		echo "Hello World!";
 	}
