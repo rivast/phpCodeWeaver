@@ -10,9 +10,9 @@ namespace phpCodeWeaver\Library;
 */
 final class Routing
 {
-	static private $sController;
-	static private $sAction;
-	static private $aRequest;
+	private static $sController;
+	private static $sAction;
+	private static $aRequest;
 
 	/**
 	 * Method loads Routing Details
@@ -20,14 +20,11 @@ final class Routing
 	 * @param 	string 	$sUrl
 	 * @return 	bool
 	 */
-    static public function Load($sUrl)
+    public static function load($sUrl)
     {
-        if (empty($sUrl))
-		{
+        if (empty($sUrl)) {
 			$aUrl = array('Index', 'Home');
-		}
-		else
-		{
+		} else {
 			$aUrl = explode("/", $sUrl);
 		}
 
@@ -36,14 +33,10 @@ final class Routing
 
 		$aRequest = array();
 		$sKey = '';
-		foreach ($aUrl as $sValue) 
-		{
-			if (empty($sKey))
-			{
+		foreach ($aUrl as $sValue) {
+			if (empty($sKey)) {
 				$sKey = $sValue;
-			}
-			else
-			{
+			} else {
 				$aRequest[$sKey] = $sValue;
 				$sKey = '';
 			}
@@ -57,7 +50,7 @@ final class Routing
      *
      * @return 	string
      */
-    static public function Controller()
+    public static function controller()
     {
         return self::$sController;
     }
@@ -67,7 +60,7 @@ final class Routing
      *
      * @return 	string
      */
-    static public function Action()
+    public static function action()
     {
         return self::$sAction;
     }
@@ -77,7 +70,7 @@ final class Routing
      *
      * @return 	array
      */
-    static public function Request()
+    public static function request()
     {
         return self::$aRequest;
     }

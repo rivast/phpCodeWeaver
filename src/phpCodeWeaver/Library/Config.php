@@ -17,19 +17,15 @@ final class Config
 	 * @param 	string 	$sConfig
 	 * @return 	bool
 	 */
-    public function Load($sConfig)
+    public function load($sConfig)
     {
         $sConfig = ROOT . DS . 'Config' . DS . str_replace('\\', DS, $sConfig) . '.php';
-		if (file_exists($sConfig))
-		{
+		if (file_exists($sConfig)) {
 			include_once($sConfig);
 			return true;
-		}
-		elseif (defined(ENVIRONMENT))
-		{
+		} elseif (defined(ENVIRONMENT)) {
 			$sConfig = ROOT . DS . 'Config' . DS . ENVIRONMENT . DS . str_replace('\\', DS, $sConfig) . '.php';
-			if (file_exists($sConfig))
-			{
+			if (file_exists($sConfig)) {
 				include_once($sConfig);
 				return true;
 			}
